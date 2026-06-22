@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简明产品说明 · 开云</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #fcfbf9;
+      color: #2b2a28;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      padding: 2.5rem 1.25rem;
+    }
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* hero 区 */
+    .hero {
+      margin-bottom: 3rem;
+    }
+    .hero span.label {
+      display: inline-block;
+      font-size: 0.6875rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #7e7c79;
+      border-bottom: 1px solid #d9d6d0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-size: 2.1rem;
+      font-weight: 450;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: #1f1e1c;
+      margin-bottom: 0.7rem;
+    }
+    .hero p {
+      font-size: 0.95rem;
+      color: #504e4b;
+      max-width: 540px;
+    }
+
+    /* 摘要块 */
+    .summary-card {
+      background: #ffffff;
+      border: 1px solid #e3e0da;
+      border-radius: 14px;
+      padding: 1.6rem 1.8rem;
+      margin-bottom: 2.8rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+    .summary-card p {
+      font-size: 0.925rem;
+      color: #3b3a37;
+    }
+
+    /* 通用标题层级 */
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin: 2.2rem 0 0.8rem;
+      color: #242220;
+      border-left: 3px solid #b8aea3;
+      padding-left: 0.85rem;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 480;
+      margin: 1.5rem 0 0.3rem;
+      color: #2f2d2a;
+    }
+
+    /* 特点列表 */
+    .feature-grid {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem 1.5rem;
+      margin: 1rem 0 2rem;
+    }
+    .feature-grid li {
+      font-size: 0.9rem;
+      padding-left: 1.2rem;
+      position: relative;
+      color: #3b3a37;
+    }
+    .feature-grid li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: #7d7368;
+      font-weight: 700;
+    }
+
+    /* 使用建议卡片 */
+    .advice-block {
+      background: #f5f2ed;
+      border-radius: 16px;
+      padding: 1.5rem 1.8rem;
+      margin: 1.8rem 0 2.4rem;
+    }
+    .advice-block p {
+      font-size: 0.9rem;
+      color: #3b3a37;
+      margin-bottom: 0.5rem;
+    }
+    .advice-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* faq 小摘要 */
+    .faq-item {
+      border-bottom: 1px solid #e2ded7;
+      padding: 0.9rem 0;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-question {
+      font-weight: 480;
+      font-size: 0.9rem;
+      color: #2d2b28;
+      margin-bottom: 0.2rem;
+    }
+    .faq-answer {
+      font-size: 0.85rem;
+      color: #5d5a55;
+    }
+
+    /* 可信说明 */
+    .note-legacy {
+      margin: 2.5rem 0 1.2rem;
+      padding: 1rem 1.4rem;
+      background: #faf9f7;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      color: #5f5c57;
+      border: 1px solid #eae6df;
+    }
+
+    /* 链接样式 */
+    a {
+      color: #3f3a33;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+      text-decoration-color: #c5bcb1;
+      transition: all 0.15s ease;
+    }
+    a:hover {
+      color: #0a0a09;
+      text-decoration-color: #3f3a33;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e3dfd8;
+      margin: 2.2rem 0;
+    }
+
+    /* 响应式 */
+    @media (max-width: 520px) {
+      body { padding: 1.5rem 1rem; }
+      .hero h1 { font-size: 1.7rem; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .summary-card { padding: 1.2rem 1.2rem; }
+      .advice-block { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- hero -->
+    <div class="hero">
+      <span class="label">产品说明 · 简明指南</span>
+      <h1>开云 · 产品摘要</h1>
+      <p>一份面向实际使用场景的整理说明，涵盖核心特点、适用建议与访问前提。</p>
+    </div>
+
+    <!-- 摘要卡片 -->
+    <div class="summary-card">
+      <p><strong>开云</strong> 并非单一工具或平台，而是一组可组合的数字能力单元。其设计围绕轻量集成与场景适配展开，适合团队在已有流程中按需引入。以下内容基于公开信息与常见实践整理，不构成使用承诺或性能保证。</p>
+    </div>
+
+    <!-- 亮点：特点网格 -->
+    <h2>亮点速览</h2>
+    <ul class="feature-grid">
+      <li>模块化结构，可按功能裁切</li>
+      <li>与常见身份体系兼容</li>
+      <li>配置化接口，减少定制开发</li>
+      <li>事件日志可追溯</li>
+      <li>权限边界清晰</li>
+      <li>文档与社区案例参考</li>
+    </ul>
+
+    <!-- 使用建议区块 -->
+    <h2>使用建议</h2>
+    <div class="advice-block">
+      <p>▸ 建议先在非生产环境试用核心模块，确认与现有系统的交互表现。</p>
+      <p>▸ 若用于内部工具或客户前端，提前规划好数据流与错误处理逻辑。</p>
+      <p>▸ 关注版本更新说明，部分能力可能随迭代调整。</p>
+      <p>▸ 对于敏感场景，建议自行完成安全评估。</p>
+    </div>
+
+    <!-- 场景／小标题 -->
+    <h2>常见场景</h2>
+    <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: #3b3a37;">
+      企业内部应用的身份串联、轻量权限分发、跨系统事件通知、以及作为原型验证时的快速集成层。不同场景下对资源消耗和响应时长的要求不同，请根据实际负载测试。
+    </p>
+
+    <!-- FAQ 摘要 -->
+    <h2>FAQ 摘要</h2>
+    <div class="faq-item">
+      <div class="faq-question">需要提前准备什么？</div>
+      <div class="faq-answer">基本的运行环境与网络连通，具体依赖项参见对应模块说明。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">是否提供技术支持？</div>
+      <div class="faq-answer">社区渠道与部分文档可参考；商业支持需单独确认服务范围。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">是否与某某产品直接竞争？</div>
+      <div class="faq-answer">开云更侧重组合与适配而非替代，建议根据自身需求横向评估。</div>
+    </div>
+
+    <!-- 可信且克制的访问说明 -->
+    <div class="note-legacy">
+      ⚡ 访问说明：本页面仅为产品介绍整理，不替代官方文档。如需了解完整功能、版本状态或使用条款，请参考 <a href="https://match-kering.com">开云</a> 相关页面。所有信息以实际发布内容为准，此处不作额外保证。
+    </div>
+
+    <hr>
+    <p style="font-size: 0.7rem; color: #8b8781; text-align: left; letter-spacing: 0.03em;">
+      整理于通用产品说明框架 · 内容保持克制与中立
+    </p>
+
+  </div>
+</body>
+</html>
